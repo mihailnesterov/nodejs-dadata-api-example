@@ -1,7 +1,7 @@
 {
     "host" : "localhost",
     "port" : 5033,
-    "token" : "your-dadata-token",
+    "token" : "your-dadata-api-key",
     "url": {
         "court": {
             "findById": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/region_court",

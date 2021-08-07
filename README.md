@@ -7,15 +7,15 @@ nodejs/express/router/node-fetch/cors/config/dadata-api
 </ol>
 
 ## Installation
-<ul>
-<li>npm i</li>
-</ul>
+
+<p>npm install</p>
 
 or
 
-<ul>
-<li>npm i express node-fetch cors config</li>
-</ul>
+<ol>
+<li>npm init --yes</li>
+<li>npm install express node-fetch cors config</li>
+</ol>
 
 ## Run
 node server.js

@@ -1,10 +1,5 @@
 # Backend Nodejs DaData API example
 nodejs/express/router/node-fetch/cors/config/dadata-api
-## API
-<ol>
-<li>fetch court data by code <a target="_blank" href="https://dadata.ru/api/suggest/region_court/">more...</a></li>
-<li>fetch company data by inn <a target="_blank" href="https://dadata.ru/api/find-party/">more...</a></li>
-</ol>
 
 ## Installation
 
@@ -15,6 +10,15 @@ or
 <ol>
 <li>npm init --yes</li>
 <li>npm install express node-fetch cors config</li>
+</ol>
+
+## API
+<ol>
+<li><a href="https://dadata.ru/api/">Get DaData API Key</a></li>
+<li>Edit <b>"config/your_config_file.json"</b></li>
+<li>Add your <b>DaData API Key</b> in <b>"token"</b> param</li>
+<li>Fetch court by code <b>/api/court/code</b></li>
+<li>Fetch company by inn <b>/api/company/inn</b></li>
 </ol>
 
 ## Run

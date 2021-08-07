@@ -4,12 +4,22 @@ const token = config.get('token');
 const router = express.Router();
 const fetch = require('node-fetch');
 
-// get company information by inn
+// get company data by inn
 router.get('/company/:inn', (req, res) => {
 
-    const url = config.get('url.company.findById');
+    const url       = getCompanyUrl();
+    const options   = getFetchOptions( req.params.inn );
+    
+    fetchCompanyData(url, options);
 
-    const options = {
+});
+
+function getCompanyUrl() {
+    return config.get('url.company.findById');
+}
+
+function getFetchOptions( param ) {
+    return {
         method: "POST",
         mode: "cors",
         headers: {
@@ -17,13 +27,15 @@ router.get('/company/:inn', (req, res) => {
             "Accept": "application/json",
             "Authorization": "Token " + token
         },
-        body: JSON.stringify({query: req.params.inn})
-    }
+        body: JSON.stringify({query: param})
+    };
+}
 
+function fetchCompanyData(url, options) {
     fetch(url, options)
         .then(res => res.json())
-        .then(json => console.log('INN=' + req.params.inn, json.suggestions[0].data))
+        .then(json => console.log('result', json.suggestions[0].data))
         .catch(error => console.log("error", error));
-});
+}
 
 module.exports = router;

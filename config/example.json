@@ -1,0 +1,14 @@
+{
+    "host" : "localhost",
+    "port" : 5033,
+    "token" : "your-dadata-token",
+    "url": {
+        "court": {
+            "findById": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/region_court",
+            "suggest": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/region_court"
+        },
+        "company": {
+            "findById": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party"
+        }
+    }
+}

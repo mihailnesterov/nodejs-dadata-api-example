@@ -26,3 +26,7 @@ node server.js
 
 ## Run PM2
 pm2 start --name server-name server.js --watch
+
+## Use API Examples:
+<p>http://localhost:5033/api/company/7706413348</p>
+<p>http://localhost:5033/api/court/52MS0022</p>

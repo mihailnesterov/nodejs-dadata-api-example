@@ -27,5 +27,5 @@ or
     pm2 start --name server-name server.js --watch
 
 ## Examples
-* http://localhost:5033/api/company/7706413348
-* http://localhost:5033/api/court/52MS0022
+* /api/company/7706413348
+* /api/court/52MS0022

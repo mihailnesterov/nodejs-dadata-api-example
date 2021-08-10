@@ -5,10 +5,12 @@ const utils = require('../lib/utils');
 // get company data by inn
 router.get('/company/:inn', (req, res) => {
 
-    const url       = utils.getUrlByName( 'company' );
-    const options   = utils.getOptions( req.params.inn );
+    const { getUrlByName, getOptions, fetchData } = utils;
+
+    const url       = getUrlByName( 'company' );
+    const options   = getOptions( req.params.inn );
     
-    utils.fetchData(url, options);
+    fetchData( url, options );
 
 });
 
